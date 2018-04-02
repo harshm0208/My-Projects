@@ -1,0 +1,145 @@
+<?php include('server.php'); ?>
+<html>
+<head>
+<title> User Profile </title>
+<link rel="stylesheet" href="e1.css">
+<script>
+function ValidateForm() {
+var username = document.validate.username; 
+var emailid = document.validate.emailid; 
+var number = document.validate.number; 
+var dob = document.validate.dob;
+var pass = document.validate.password; 
+var address = document.validate.address; 
+var state = document.validate.state;
+var cb = document.validate.cb;
+var qualification = document.validate.qualification;
+
+if (username.value == "") 
+{
+alert("Please enter your name.");
+ username.focus();
+ return false; 
+} 
+if (emailid.value == "") 
+{ 
+window.alert("Please enter a valid e-mail address.");
+ 
+return false; 
+} 
+if (emailid.value.indexOf("@", 0) < 0)
+ { 
+window.alert("Please enter a valid e-mail address."); 
+ 
+return false; 
+} 
+if (emailid.value.indexOf(".", 0) < 0)
+ {
+ window.alert("Please enter a valid e-mail address.");
+ 
+ return false; 
+} 
+if (pass.value == "") 
+{ 
+window.alert("Please enter a valid password.");
+ 
+return false; 
+}
+
+if (number.value == "") 
+{
+window.alert("Please enter a valid mobile number.");
+ return false; 
+} 
+
+
+
+if (address.value == "") 
+{
+window.alert("Please enter your address.");
+ 
+ return false; 
+} 
+if(state.selectedIndex < 1)
+{
+alert("Please select state"); 
+
+ return false; 
+}
+if(qualification.selectedIndex < 1)
+{
+alert("Please select qualification"); 
+
+ return false; 
+}
+if (cb.checked == false) 
+{ 
+alert("Please accept terms and conditions"); 
+
+ return false; 
+} 
+return true;
+}
+
+</script>
+
+
+
+
+</head>
+
+<body>
+<font align="center">
+<h1> Create User Account </h1>
+
+<form name="validate" onsubmit="return ValidateForm()">
+   
+  <p> Username: </p>
+  <input type="text" name="username" value=""><br>
+  <p> Email id: </p>
+  <input type="text" name="emailid" value=""><br>
+ <p> Password: </p>
+  <input type="password" name="password1" value=""><br>
+   <p> Confirm Password: </p>
+  <input type="password" name="password2" value=""><br>
+<p> Date of birth: </p>
+  <input type="date" name="dob" min="1980-01-01" value=""><br>
+<p> Mobile number: </p>
+  <input type="text" name="number" value=""><br>
+  <p>Address: </p>
+ <input type="text" name="address" value="">
+  <br><br>
+<p>State: </p>
+<select name="state">
+  <option value="empty"></option>
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="New Delhi">New Delhi</option>
+  <option value="Gujarat">Gujarat</option>
+<option value="Punjab">Punjab</option>
+  <option value="Goa">Goa</option>
+ </select>
+<br><br>
+<p>Qualification: </p>
+<select name="qualification">
+  <option value="empty"></option>
+  <option value="12th pass">12th pass</option>
+  <option value="B.E">B.E</option>
+  <option value="S.E">S.E</option>
+<option value="T.E">T.E</option>
+  <option value="Graduated">Graduated</option>
+ </select>
+<br><br>
+<p><input type="checkbox" name="cb">I accept the terms and conditions <br></p>
+  <br>
+  
+  <input type="submit" value="Submit" name="submit">
+  <input type="reset">
+</form>
+
+
+</body>
+</html>
+
+
+
+

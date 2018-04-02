@@ -1,0 +1,106 @@
+<html>
+<head>
+<title> Signup/login </title>
+<link rel="stylesheet" href="e1.css">
+<script>
+function ValidateForm() {
+var username = document.validate.username; 
+var emailid = document.validate.emailid; 
+var phone = document.validate.number; 
+var dob = document.validate.dob;
+var pass = document.validate.password; 
+var address = document.validate.address; 
+var country = document.validate.country;
+var cb = document.validate.cb;
+
+
+if (username.value == "") 
+{
+alert("Please enter your name.");
+ username.focus();
+ return false; 
+} 
+
+if (emailid.value == "") 
+{ 
+window.alert("Please enter avalid e-mail address.");
+ 
+return false; 
+} 
+if (emailid.value.indexOf("@", 0) < 0)
+ { 
+window.alert("Please enter a valid e-mail address."); 
+ 
+return false; 
+} 
+if (pass.value == "") 
+{ 
+window.alert("Please enter avalid e-mail address.");
+ 
+return false; 
+}
+
+
+
+if (emailid.value.indexOf(".", 0) < 0)
+ {
+ window.alert("Please enter a valid e-mail address.");
+ 
+ return false; 
+} 
+if (cb.checked == false) 
+{ 
+alert("Please accept terms and conditions"); 
+
+ return false; 
+} 
+}
+
+</script>
+
+
+
+
+</head>
+
+<body>
+<font align="center">
+<h1> Create An Account </h1>
+
+<form name="validate" onsubmit="return ValidateForm()">
+  <p> Username: </p>
+  <input type="text" name="username" value=""><br>
+  <p> Email id: </p>
+  <input type="text" name="emailid" value=""><br>
+ <p> Password: </p>
+  <input type="password" name="password" value=""><br>
+<p> Date of birth: </p>
+  <input type="text" name="dob" value=""><br>
+<p> Mobile number: </p>
+  <input type="text" name="number" value=""><br>
+  <p>Address: </p>
+ <input type="text" name="number" value="">
+  <br>
+<p>Country: </p>
+<select name="country">
+  <option value="empty"></option>
+  <option value="India">India</option>
+  <option value="US">US</option>
+  <option value="UK">UK</option>
+</select>
+<br><br>
+
+<p><input type="checkbox" name="cb">I accept the terms of conditions <br></p>
+  <br>
+  
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,47 @@
+body{
+	background: url("HOME3.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+a.button1{
+position:absolute;
+	top: 80%;
+	left:25%;
+opacity: 0.9;
+border-radius: 55px;
+    background-color:  #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+a.button2{
+	position:absolute;
+	top: 80%;
+	left:65%;
+opacity: 0.8;
+border-radius: 55px;
+    background-color:  #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+

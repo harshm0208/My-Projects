@@ -1,0 +1,124 @@
+<html>
+<head>
+<title> User Profile </title>
+<link rel="stylesheet" href="e2.css">
+<script>
+function ValidateForm() {
+var username = document.validate.username; 
+var emailid = document.validate.emailid; 
+var number = document.validate.number; 
+var dob = document.validate.dob;
+var pass = document.validate.password; 
+var address = document.validate.address; 
+var state = document.validate.state;
+var cb = document.validate.cb;
+var qualification = document.validate.qualification;
+
+if (username.value == "") 
+{
+alert("Please enter Company name.");
+ username.focus();
+ return false; 
+} 
+if (emailid.value == "") 
+{ 
+window.alert("Please enter a valid e-mail address.");
+ 
+return false; 
+} 
+if (emailid.value.indexOf("@", 0) < 0)
+ { 
+window.alert("Please enter a valid e-mail address."); 
+ 
+return false; 
+} 
+if (emailid.value.indexOf(".", 0) < 0)
+ {
+ window.alert("Please enter a valid e-mail address.");
+ 
+ return false; 
+} 
+if (pass.value == "") 
+{ 
+window.alert("Please enter a valid password.");
+ 
+return false; 
+}
+
+if (number.value == "") 
+{
+window.alert("Please enter a valid mobile number.");
+ return false; 
+} 
+
+
+
+if (address.value == "") 
+{
+window.alert("Please enter company address.");
+ 
+ return false; 
+} 
+if(state.selectedIndex < 1)
+{
+alert("Please select state"); 
+
+ return false; 
+}
+ 
+if (cb.checked == false) 
+{ 
+alert("Please accept terms and conditions"); 
+
+ return false; 
+} 
+return true;
+}
+
+</script>
+
+
+
+
+</head>
+
+<body>
+<font align="center">
+<h1> Create Investor Account </h1>
+
+<form name="validate" onsubmit="return ValidateForm()">
+  <p> Company name: </p>
+  <input type="text" name="username" value=""><br>
+  <p> Email id: </p>
+  <input type="text" name="emailid" value=""><br>
+ <p> Password: </p>
+  <input type="password" name="password" value=""><br>
+<p> Mobile number: </p>
+  <input type="text" name="number" value=""><br>
+  <p>Address: </p>
+ <input type="text" name="address" value="">
+  <br><br>
+<p>State: </p>
+<select name="state">
+  <option value="empty"></option>
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="New Delhi">New Delhi</option>
+  <option value="Gujarat">Gujarat</option>
+<option value="Punjab">Punjab</option>
+  <option value="Goa">Goa</option>
+ </select>
+<br><br>
+<p><input type="checkbox" name="cb">I accept the terms and conditions <br></p>
+  <br>
+  
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+
+
+</body>
+</html>
+
+
+
+
